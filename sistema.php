@@ -19,7 +19,7 @@ function menus() {
 }
 
 function pagina1() {
-    wp_enqueue_script($handle, $src, $deps, $ver);
+    wp_enqueue_script("angular", "js/angular-1.6.4/angular.min.js", $deps, $ver);
     wp_enqueue_script($handle);
     require_once 'includes/atendimento/cadastro.php';
 }
