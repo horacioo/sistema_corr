@@ -10,12 +10,16 @@
  */
 
 // Os snippets de código virão aqui
-$capability = "administrator";
-
-
-
+/* * ******************************************************** */
 add_action("admin_menu", "menus");
 
 function menus() {
     add_menu_page("atendimento", "atendimento", 'administrator', 'atendimento');
+    add_submenu_page("atendimento", "cadastro", "cadastro", "administrator", "cad", "pagina1");
 }
+
+function pagina1() {
+    require_once 'includes/atendimento/cadastro.php';
+}
+
+/***********************************************************/
