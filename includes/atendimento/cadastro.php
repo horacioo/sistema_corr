@@ -1,5 +1,6 @@
-<div >
-    <h2>Cadastro de clientes</h2>
+
+<div ng-app="">
+    <h2>Cadastro de clientes {{5+4}} </h2>
     <form name="cadastro" method="POST" >
         <p><label>Nome</label><input type="text" required="required" name="cadastro[nome]"></p>
         <p><label>cpf</label><input type="text" required="required" name="cadastro[cpf]"></p>

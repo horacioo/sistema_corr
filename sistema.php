@@ -11,6 +11,8 @@
 
 // Os snippets de código virão aqui
 /* * ******************************************************** */
+$tema = plugin_dir_url("sistema"); //get_template_directory_uri();
+
 add_action("admin_menu", "menus");
 
 function menus() {
@@ -18,9 +20,12 @@ function menus() {
     add_submenu_page("atendimento", "cadastro", "cadastro", "administrator", "cad", "pagina1");
 }
 
+
+
 function pagina1() {
-    wp_enqueue_script("angular", "js/angular-1.6.4/angular.min.js", $deps, $ver);
-    wp_enqueue_script($handle);
+    global $tema;
+    wp_enqueue_script("angular", "$tema"."/sistema/js/angular-1.6.4/angular.min.js", $deps, $ver);
+    wp_enqueue_script("angular");
     require_once 'includes/atendimento/cadastro.php';
 }
 
